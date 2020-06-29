@@ -23,7 +23,7 @@ public class ApplicationTests {
     public void testSend() {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom(username);
-        message.setTo("7685413@qq.com");
+        message.setTo("757402349@qq.com");
         message.setSubject("我是测试主题");
         message.setText("我是测试内容");
 
