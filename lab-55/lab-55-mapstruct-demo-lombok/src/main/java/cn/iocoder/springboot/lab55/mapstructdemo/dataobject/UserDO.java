@@ -1,11 +1,13 @@
 package cn.iocoder.springboot.lab55.mapstructdemo.dataobject;
 
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
 @Data
 @Accessors(chain = true)
+@Builder
 public class UserDO {
 
     /** 用户编号 **/

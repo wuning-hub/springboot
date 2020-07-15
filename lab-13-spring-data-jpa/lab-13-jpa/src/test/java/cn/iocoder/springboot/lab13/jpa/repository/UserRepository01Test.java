@@ -23,7 +23,7 @@ public class UserRepository01Test {
     @Test // 插入一条记录
     public void testSave() {
         UserDO user = new UserDO().setUsername(UUID.randomUUID().toString())
-                .setPassword("nicai").setCreateTime(new Date());
+                .setPassword("洪七").setCreateTime(new Date());
         userRepository.save(user);
     }
 

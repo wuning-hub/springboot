@@ -6,4 +6,5 @@ import org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDa
 
 @SpringBootApplication(exclude = {ElasticsearchAutoConfiguration.class, ElasticsearchDataAutoConfiguration.class})
 public class Application {
+
 }

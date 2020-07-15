@@ -1,5 +1,6 @@
 package cn.iocoder.springboot.lab55.mapstructdemo.bo;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.experimental.Accessors;
 

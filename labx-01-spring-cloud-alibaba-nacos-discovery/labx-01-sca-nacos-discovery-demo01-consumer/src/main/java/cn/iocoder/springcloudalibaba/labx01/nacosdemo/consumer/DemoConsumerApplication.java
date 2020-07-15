@@ -35,10 +35,12 @@ public class DemoConsumerApplication {
     @RestController
     static class TestController {
 
+        //注入不是NacosDiscoveryClient 保证通用性
         @Autowired
         private DiscoveryClient discoveryClient;
         @Autowired
         private RestTemplate restTemplate;
+        //负载均衡客户端
         @Autowired
         private LoadBalancerClient loadBalancerClient;
 
@@ -46,6 +48,8 @@ public class DemoConsumerApplication {
         public String hello(String name) {
             // 获得服务 `demo-provider` 的一个实例
             ServiceInstance instance;
+
+            //  提供俩种获取 demo-provider 实例的方法 分别基于 DiscoveryClient 和 LoadBalancerClient。
             if (true) {
                 // 获取服务 `demo-provider` 对应的实例列表
                 List<ServiceInstance> instances = discoveryClient.getInstances("demo-provider");
